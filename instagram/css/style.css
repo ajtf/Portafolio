@@ -1,0 +1,39 @@
+body{
+    background-color: gray;
+    margin: 0;
+    display: block;
+}
+header{
+    background-color: white;
+    text-align: center;
+   
+}
+h1{margin: 0;}
+#contenedor{
+   
+    width: 500px;
+    margin: auto;
+}
+.publi{
+    background-color: white;
+    margin-top: 10px;
+}
+.publi .publi-head div:first-child{
+    display: inline-block;
+    width: 78%;
+}
+.publi .publi-head div:last-child{
+    display: inline-block;
+    width: 18%;
+    text-align: right;
+    padding: 5px;
+    color: gray;
+}
+.publi h2, .publi p{
+    padding: 10px;
+    margin: 0;
+}
+
+img{
+    width: 100%;
+}

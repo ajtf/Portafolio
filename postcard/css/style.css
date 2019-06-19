@@ -1,0 +1,53 @@
+#padre{
+    border: 1px solid black;
+    width: 450px;
+    height: 300px;
+    margin: auto;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    position: absolute;
+}
+#d1{
+    width: 100%;
+    height: 90px;
+}
+h1{
+    margin-left: 20px;
+    float: left;
+    font-family: 'Courier New', Courier, monospace;
+}
+p{
+    font-size: 12px;
+    font-family: 'Courier New', Courier, monospace;
+}
+img{
+   width: 70px;
+   height: 70px;
+   float: right;
+   margin: 10px;
+}
+nav{
+    float: left;
+    margin-left: 20px;
+    width: 44%;
+    height: 158px;
+}
+section{
+    float: right;
+    margin-top: 5px;
+    width: 47%;
+    height: 158px;
+    font-size: 20px;
+}
+.sinborde{
+    border: 0;
+    font-family: 'Courier New', Courier, monospace;
+    border-bottom: 1px solid black;
+}
+button{
+    margin-left: 150px;
+    border: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
