@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Instagram Boostrap</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="boostrap/css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/9a9a239873.js"></script>
+  <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
+  <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" media="all">
+</head>
+<body>
+    <div class="container-fluid">
+        <div id="navegador" class="row">
+            <nav class="container col-9 justify-content-start">
+              <a class="navbar-brand" href="#"></a>
+                <i class="fab fa-instagram">Instagram</i>
+             </a>
+            </nav>
+            <!--boton y dropdown-menu -->
+            <ul class="col-3 nav nav-pills justify-content-end">
+                <li class="nav-item">
+                  <!--Boton modal-->
+                  <button type="button" class="btn btn-primary btn-success" data-toggle="modal" data-target="#exampleModal">
+                    Create a new post
+                  </button>
+                  <!--modal-->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <div class="form-group">
+                              <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="2" cols="50"></textarea>
+                            </div>
+                          </div>
+                          <div class="modal-body">
+                            <i id="camaraModal" class="fas fa-camera"></i>
+                            <i id="gpsModal" class="fas fa-map-marker-alt"></i>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary btn-success">Publish</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </li>
+                <!--DROPDOWN-->
+                <li id="setting" class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-cog"></i>
+                  </a>
+                  <div id="btnSetting" class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Log Out</a>
+                  </div>
+                </li>
+              </ul>
+        </div>
+    </div>
+    <!--Botones para las columnas-->
+    <div class="container">
+      <div class="d-flex justify-content-center">
+          <ul class="nav nav-pills mb-2" id="pills-tab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link acive" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false"><i class="fas fa-th"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false"><i class="fas fa-square"></i></a>
+            </li>
+          </ul>
+      </div>
+      <div class="tab-content" id="pills-tabContent">
+              <!-- Contenido GRID 3X3-->
+        <div class="tab-pane fade show active" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+          <div id="filas" class="row">
+            <div class="col-sm-4">
+              <img class="card-img-top" src="./img/comida.jpg" alt="Card image cap">
+            </div>  
+            <div class="col-sm-4">
+              <img class="card-img-top" src="./img/comida.jpg" alt="Card image cap">
+            </div>
+            <div class="col-sm-4">
+              <img class="card-img-top" src="./img/comida.jpg" alt="Card image cap">
+            </div>
+          </div>
+          <div id="filas" class="row">
+            <div class="col-sm-4">
+              <img class="card-img-top" src="./img/comida.jpg" alt="Card image cap">
+            </div>  
+            <div class="col-sm-4">
+              <img class="card-img-top" src="./img/comida.jpg" alt="Card image cap">
+            </div>
+            <div class="col-sm-4">
+              <img class="card-img-top" src="./img/comida.jpg" alt="Card image cap">
+            </div>
+          </div>
+          <div id="filas" class="row">
+            <div class="col-sm-4">
+              <img class="card-img-top" src="./img/comida.jpg" alt="Card image cap">
+            </div>  
+            <div class="col-sm-4">
+              <img class="card-img-top" src="./img/comida.jpg" alt="Card image cap">
+            </div>
+            <div class="col-sm-4">
+              <img class="card-img-top" src="./img/comida.jpg" alt="Card image cap">
+            </div>
+          </div>    
+       </div> 
+       
+      <!--Contenido 1 columna-->
+      <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-sm-8">
+                <div id="cartaInsta" class="card ">
+                    <div id="cardTitulo" class="card-body">   
+                      <p id="tituloCardTitulo" class="float-left">My First Photo</p>
+                      <span id="fechaCardTitulo" class="float-right">12/19</span> 
+                    </div>
+                    <img class="card-img-top" src="./img/comida.jpg" alt="Card image cap">
+                    <div id="cardBody" class="card-body">
+                      <span>23 Likes</span>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <div class="row">
+                        <span class="col-1"><i class="far fa-heart"></i></span>
+                        <span class="col-10">Comment...</span>
+                        <span class="col-1"><i class="fas fa-ellipsis-v"></i></span>
+                      </div>
+                    </div>
+                </div>
+                <div id="cartaInsta" class="card ">
+                    <div id="cardTitulo" class="card-body">   
+                      <p id="tituloCardTitulo" class="float-left">My First Photo</p>
+                      <span id="fechaCardTitulo" class="float-right">12/19</span> 
+                    </div>
+                    <img class="card-img-top" src="./img/comida.jpg" alt="Card image cap">
+                    <div id="cardBody" class="card-body">
+                      <span>23 Likes</span>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <div class="row">
+                        <span class="col-1"><i class="far fa-heart"></i></span>
+                        <span class="col-10">Comment...</span>
+                        <span class="col-1"><i class="fas fa-ellipsis-v"></i></span>
+                      </div>
+                    </div>
+                </div>
+                <div id="cartaInsta" class="card ">
+                    <div id="cardTitulo" class="card-body">   
+                      <p id="tituloCardTitulo" class="float-left">My First Photo</p>
+                      <span id="fechaCardTitulo" class="float-right">12/19</span> 
+                    </div>
+                    <img class="card-img-top" src="./img/comida.jpg" alt="Card image cap">
+                    <div id="cardBody" class="card-body">
+                      <span>23 Likes</span>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <div class="row">
+                        <span class="col-1"><i class="far fa-heart"></i></span>
+                        <span class="col-10">Comment...</span>
+                        <span class="col-1"><i class="fas fa-ellipsis-v"></i></span>
+                      </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+          
+      </div>  
+    </div>       
+  </div>   
+
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./boostrap/js/bootstrap.js"></script>
+</body>
+</html>

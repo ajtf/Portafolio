@@ -1,0 +1,16 @@
+#navegador{
+   background-color: rgb(184, 182, 182);
+   padding: 10px;
+   padding-right: 20px;
+}
+#navbarDropdownMenuLink{color: rgb(54, 53, 53);}
+#btnSetting:active{background-color: rgb(100, 99, 99);}
+#cardTitulo, #cardBody{ padding: 0px;}
+#filas * {padding: 0.5px;}
+#camaraModal, #gpsModal{
+   border: 1px solid gray;
+   border-radius: 5px;
+   padding: 5px;
+}
+#pills-contact{background: rgb(184, 182, 182);}
+#cartaInsta{margin-top: 20px;}
