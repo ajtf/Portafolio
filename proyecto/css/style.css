@@ -1,0 +1,53 @@
+#anuncioTop{
+    font-family: 'Lobster', cursive;
+    font-size: 35px;
+}
+/*Fin del Anuncio*/
+.fas.fa-search, .fas.fa-shopping-cart{font-size: 25px;}
+h1,h2{
+    font-family: 'Cuprum', sans-serif;
+    font-size: 30px;
+    margin-top: 10px;
+}
+#search-car{
+    border-bottom-color: green;
+    border-bottom-width: 3px;
+}
+#search-marca, #search-modelo, #search-motor{
+    border-bottom-color:blue;
+    border-bottom-width: 3px;
+}
+#loginLogo{
+    display: inherit !important;
+    padding-top: 20px;
+    font-size: 40px;
+}
+#seleccionVehiculo{margin: 20px 0px;}
+#carousel{padding-right: 0px;}
+#titulo-seleccion-vehiculo{
+    padding-top: 20px;
+    padding-bottom: 55px;
+}
+div.card-body{
+    padding: 0;
+}
+.col-lg-3.card.mb-3{
+    margin: 10px;
+    padding: 0;
+}
+.col-sm-6.col-lg-2.card{
+    width: 180px;
+    margin-left: 5px;
+    padding: 0px;
+}
+i.fas.fa-tags, i.fas.fa-shipping-fast, i.fas.fa-stopwatch{
+    padding-top: 25px;
+    font-size: 50px;
+}
+/*Carousel*/
+
+#blog{margin-top: 30px;}
+#footer{height: 30px;}
+div.col-4{padding: 0;}
+.fab.fa-twitter, .fab.fa-instagram, .fab.fa-facebook-f{font-size: 20px;}
+#footer-nombre, #footer-derechos{text-align: center;}

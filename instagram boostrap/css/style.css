@@ -5,6 +5,7 @@
 }
 #navbarDropdownMenuLink{color: rgb(54, 53, 53);}
 #btnSetting:active{background-color: rgb(100, 99, 99);}
+#setting:active{background-color: rgb(100, 99, 99);}
 #cardTitulo, #cardBody{ padding: 0px;}
 #filas * {padding: 0.5px;}
 #camaraModal, #gpsModal{
@@ -14,3 +15,11 @@
 }
 #pills-contact{background: rgb(184, 182, 182);}
 #cartaInsta{margin-top: 20px;}
+#logoInsta{
+   height: 20px;
+   width: 20px;
+}
+.nav-pills .nav-link.active{
+   background-color: rgb(100, 99, 99) !important;
+}
+#pills-profile-tab, #pills-contact-tab{color: rgb(54, 53, 53);}

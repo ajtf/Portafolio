@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Cuprum&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="boostrap/css/bootstrap.min.css" />
+    <script src="https://kit.fontawesome.com/9a9a239873.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css"
+      media="all"
+    />
+    <title>Repuesto de Carro</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!--Inicio del Anuncio-->
+    <section class="container slider d-flex justify-content-center align-items-center">
+      <h1 id="anuncioTop" class="display-4 d-none d-lg-block">
+        Todas las pastilla de frenos estan a un 20% de descuento
+      </h1>
+    </section>
+    <!--Fin del Anuncio-->
+    <!--Inicio Menu header--> 
+     <div class="container">
+      <nav class="row navbar navbar-expand-sm navbar-light bg-light ">
+        <div class="col-lg-4 d-lg-inline" style="display: contents;">
+          <h1>Parts Angels</h1>
+          <form class="form-inline ">
+            <input
+              id="search-car"
+              class="form-control form-control-sm mr-3 w-75"
+              type="text"
+              placeholder="Search"
+              aria-label="Search"
+              />
+            <a class="nav-item nav-link" href="#">
+              <i class="fas fa-search" aria-hidden="true"></i>
+            </a>
+          </form>
+        </div>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <!--Add my vehicle-->
+          <div class="col-lg-6 text-center">
+            <h1>My vehicle</h1>
+            <a class="nav-item nav-link" href="#">Add my vehicle</a>
+          </div>
+          <!--login-->
+          <div class="col-lg-3 text-center" >
+            <i id="loginLogo" class="fas fa-user-circle"></i>
+            <a class="nav-item nav-link" href="#">Login</a>
+          </div>
+          <!--Car shopping-->
+          <div class="col-lg-3 text-center">
+            <h1>Car shop</h1>
+            <a class="nav-item nav-link" href="#">
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+          </div>
+        </div>  
+      </nav>
+     </div>
+    <!--Fin Menu header-->
+    <!--Section 1 (seleccion del vehiculo y carrusel)-->
+    <section>
+      <div class="container">
+        <!--seleccion del vehiculo-->
+        <div id="seleccionVehiculo" class="row">
+          <div class="col-lg-5">
+            <h2 id="titulo-seleccion-vehiculo"><i class="fas fa-car"></i>  Select your vehicle</h2>
+            <!--opcion marca del carro-->
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="search-marca"
+                  >1</label
+                >
+              </div>
+              <select class="custom-select" id="search-marca">
+                <option selected>Choose...</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+            <!--opcion modelo del carro-->
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="search-modelo"
+                  >2</label
+                >
+              </div>
+              <select class="custom-select" id="search-modelo">
+                <option selected>Choose...</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+            <!--opcion tipo de motor-->
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="search-motor"
+                  >3</label
+                >
+              </div>
+              <select class="custom-select" id="search-motor">
+                <option selected>Choose...</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+            <button type="button" class="btn btn-primary">Primary</button>
+          </div>
+          <!--Carousel-->
+          <div id="carousel" class="col-lg-7">
+              <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img class="d-block w-100" src="./img/frenos.jpg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                      <img class="d-block w-100" src="./img/respuestos-auto.jpg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                      <img class="d-block w-100" src="./img/todo-repuesto.jpg" alt="Third slide">
+                    </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Fin del Section 1-->
+    <!--Inicio del Section 2 (servicios)-->
+    <section>
+      <div class="container">
+        <!--Servicios-->
+        <div id="servicios" class="row">
+          <div class="co-md-6 col-lg-3 card mb-3" style="max-width: 265px;">
+            <div class="row no-gutters">
+              <div class="col-md-3">
+                <i class="fas fa-tags"></i>
+              </div>
+              <div class="col-md-9">
+                <div class="card-body">
+                  <h5 class="card-title">Precios con descuentos</h5>
+                  <p class="card-text">
+                    <small class="text-muted"
+                      >Precios reducidos en repuestos de muchas marcas</small
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="co-md-6 col-lg-3 card mb-3" style="max-width: 265px;">
+            <div class="row no-gutters">
+              <div class="col-md-3">
+                <i class="fas fa-shipping-fast"></i>
+              </div>
+              <div class="col-md-9">
+                <div class="card-body">
+                  <h5 class="card-title">Envío Seguro</h5>
+                  <p class="card-text">
+                    <small class="text-muted">Pedidos mayores de 25$, la entrega será gratuita</small>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="co-md-6 col-lg-3 card mb-3" style="max-width: 265px;">
+            <div class="row no-gutters">
+              <div class="col-md-3">
+                <i class="fas fa-stopwatch"></i>
+              </div>
+              <div class="col-md-9">
+                <div class="card-body">
+                  <h5 class="card-title">Entrega a tiempo</h5>
+                  <p class="card-text">
+                    <small class="text-muted"
+                      >En menos de 24 horas despues del pago</small
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="co-md-6 col-lg-3 card mb-3" style="max-width: 265px;">
+            <div class="row no-gutters">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Modo de Envío</h5>
+                  <p class="card-text">
+                    <small class="text-muted"
+                      >Precios reducidos en repuestos de muchas marcas</small
+                    >
+                  </p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Fin del Section 2-->
+    <!--Inicio del Section 3 (Piezas,Fabricantes y Accesorios)-->
+    <section>
+      <div class="container">
+        <!--Menu de Piezas, Fabricantes y Accesorios-->
+        <div id="Piezas-Fabricante-Accesorios" class="row">
+          <div class="container">
+            <div class="row justify-content-center" style="margin-bottom: 20px;">
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Piezas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Fabricantes</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Accesorios</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+              <!--Contenido de las piezas-->
+              <div class="container">
+                <div class="row">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis inventore, dolor saepe, quia aperiam, sint consequatur doloremque dolorem quos ipsam incidunt a praesentium illum obcaecati. Ullam esse odio voluptatum rerum?
+                </div>
+              </div>
+            </div>  
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam facere sed dicta veniam illo, placeat rem velit consectetur itaque exercitationem? Cupiditate expedita tenetur repellat. Laborum culpa modi enim corporis cum!</div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium ab alias quia ut similique facilis voluptatibus aliquam rem cumque esse consectetur asperiores, debitis laboriosam. Eos atque at consequuntur eius architecto.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Fin del Section 3-->
+    <!--Inicio del Setion 4 (blog)-->
+    <section>
+      <div id="blog" class="container">
+        <div class="row">
+            <div class="col-lg-6 card mb-3" style="max-width: 530px; margin:0px 20px;">
+              <div class="row no-gutters">
+                <div class="col-md-4">
+                  <img src="..." class="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 card mb-3" style="max-width: 530px; margin:0px 20px;">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="..." class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+    </section>
+    <!--Fin del Section 4-->
+    <!--Footer-->
+    <footer>
+      <div class="container">
+        <div id="footer" class="row">
+          <div class="col-4">
+            <p>Redes Sociales: </p>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-facebook-f"></i>
+          </div>
+          <div id="footer-nombre" class="col-4">
+            <h1>Parts Angels</h1>
+          </div>
+          <div id="footer-derechos" class="col-4">
+            <p>Todos los derechos reservados</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--Footer-->
+
+ 
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./boostrap/js/bootstrap.js"></script>
+  </body>
+</html>
