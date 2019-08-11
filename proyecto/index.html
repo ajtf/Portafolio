@@ -6,20 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Repuesto de Carro</title>
-  <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Cuprum&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="boostrap/css/bootstrap.min.css" />
   <script src="https://kit.fontawesome.com/9a9a239873.js"></script>
   <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" />
   <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css"
     media="all" />
-  <link rel="stylesheet" href="css/style.css" />
-  <!--Carrusel-->
-  <link rel="stylesheet" type="text/css" href="./css/css-carrusel/demo.css" />
-  <link rel="stylesheet" type="text/css" href="./css/css-carrusel/style-carrusel.css" />
-  <link rel="stylesheet" type="text/css" href="./css/css-carrusel/jquery.jscrollpane.css" media="all" />
-  <link href='http://fonts.googleapis.com/css?family=Coustard:900' rel='stylesheet' type='text/css' />
-  <link href='http://fonts.googleapis.com/css?family=Rochester' rel='stylesheet' type='text/css' />
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <link rel="stylesheet" href="assets/owl.carousel.css" />
+  <link rel="stylesheet" href="assets/owl.theme.default.css">
+  <link rel="stylesheet" href="css/carousel-style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -31,92 +28,202 @@
   </section>
   <!--Fin del Anuncio-->
   <!--Inicio Menu header-->
-  <div class="container">
-    <nav id="menu" class="row navbar navbar-expand-sm navbar-light bg-light ">
-      <div class="col-lg-4 d-lg-inline" style="display: contents;">
-        <h1>Parts Angels</h1>
-        <form class="form-inline ">
-          <input id="search-car" class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
-            aria-label="Search" />
-          <a class="nav-item nav-link" href="#">
-            <i class="fas fa-search" aria-hidden="true"></i>
-          </a>
-        </form>
-      </div>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-        data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <!--Add my vehicle-->
-        <div class="col-lg-6 text-center">
-          <h1>My vehicle</h1>
-          <a class="nav-item nav-link" href="#">Add my vehicle</a>
+  <section>
+    <div class="container">
+      <!--Logo del Menu-->
+      <nav id="menu" class="row navbar navbar-expand-sm">
+        <div class="col-lg-4 d-lg-inline" style="display: contents;">
+          <h1>Parts Angels</h1>
+          <form class="form-inline ">
+            <input id="search-car" class="form-control form-control-sm mr-3 w-75" type="text"
+              placeholder="Search Keyword, part #" aria-label="Search" />
+            <a class="nav-item nav-link" href="#">
+              <i class="fas fa-search" aria-hidden="true"></i>
+            </a>
+          </form>
         </div>
-        <!--login-->
-        <div class="col-lg-3 text-center">
-          <i id="loginLogo" class="fas fa-user-circle"></i>
-          <a class="nav-item nav-link" href="#">Login</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+          data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="fas fa-bars" style="color: white;"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <!--Add my vehicle-->
+          <div class="col-lg-6 text-center">
+            <h1>Tu carro</h1>
+            <!-- Button modal -->
+            <button id="btnAdd" type="button" class="btn" data-toggle="modal" data-target=".bd-example-modal-lg">
+              <a class="nav-item nav-link" href="#">Agrega tu carro</a>
+            </button>
+            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 id="AddVehicleTitle" class="modal-title">Agrega tu carro:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p class="text-align-left" style="color: #007bff;">Seleccione su año, marca, modelo y motor para
+                      encontrar los que se ajusten a su carro</p>
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-3 input-group">
+                          <select class="custom-select" id="inputGroupSelect04">
+                            <option selected>Año</option>
+                            <option value="1">2019</option>
+                            <option value="2">2018</option>
+                            <option value="3">2017</option>
+                          </select>
+                        </div>
+                        <div class="col-3 input-group">
+                          <select class="custom-select" id="inputGroupSelect04">
+                            <option selected>Marca</option>
+                            <option value="1">Toyota</option>
+                            <option value="2">Ford</option>
+                            <option value="3">Honda</option>
+                          </select>
+                        </div>
+                        <div class="col-3 input-group">
+                          <select class="custom-select" id="inputGroupSelect04">
+                            <option selected>Modelo</option>
+                            <option value="1">4Runner Limited</option>
+                            <option value="2">Mustang GT</option>
+                            <option value="3">Accord</option>
+                          </select>
+                        </div>
+                        <div class="col-3 input-group">
+                          <select class="custom-select" id="inputGroupSelect04">
+                            <option selected>Motor</option>
+                            <option value="1">6 Cilindros</option>
+                            <option value="2">8 Cilindros</option>
+                            <option value="3">4 Cilindros</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--login-->
+          <div class="col-lg-3 text-center">
+            <i id="loginLogo" class="fas fa-user-circle"></i>
+            <!-- Button login modal -->
+            <button id="btnLogin" type="button" class="btn" data-toggle="modal" data-target="#exampleModal">
+              <a class="nav-item nav-link" href="#">Iniciar Sesión</a>
+            </button>
+            <!-- Modal login -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Iniciar Sesión</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p id="LoginP">Escribe tu correo y contraseña</p>
+                    <form>
+                      <div class="form-group">
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                          placeholder="Escribe tu correo">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" class="form-control" id="exampleInputPassword1"
+                          placeholder="Escribe tu contraseña">
+                      </div>
+                      <button type="button" class="btn btn-secondary btn-lg btn-block">Iniciar Sesión</button>
+                      <p id="ForgotP">¿Olvidaste tu contraseña?</p>
+                      <p id="RegisterP">
+                        Si aún no tiene una cuenta de usuario en PartsAngels, regístrese ahora.
+                      </p>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!--Car shopping-->
+          <div class="col-lg-3 text-center">
+            <h1>Carro de compra</h1>
+            <a class="nav-item nav-link" href="#">
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+          </div>
         </div>
-        <!--Car shopping-->
-        <div class="col-lg-3 text-center">
-          <h1>Car shop</h1>
-          <a class="nav-item nav-link" href="#">
-            <i class="fas fa-shopping-cart"></i>
-          </a>
-        </div>
-      </div>
-    </nav>
-  </div>
+      </nav>
+    </div>
+  </section>
   <!--Fin Menu header-->
   <!--Section 1 (seleccion del vehiculo y carrusel)-->
   <section>
     <div class="container">
       <!--seleccion del vehiculo-->
-      <div id="seleccionVehiculo" class="row">
+      <div id="seleccionVehiculo" class="row mb-sm-5">
         <div class="col-lg-5">
-          <h2 id="titulo-seleccion-vehiculo"><i class="fas fa-car"></i> Select your vehicle</h2>
+          <h2 id="titulo-seleccion-vehiculo"><i class="fas fa-car"></i> Selecciona tu carro</h2>
+          <!--opcion año del carro-->
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="search-ano">1</label>
+            </div>
+            <select class="custom-select" id="search-ano">
+              <option selected>Año</option>
+              <option value="1">2018</option>
+              <option value="2">2017</option>
+              <option value="3">2016</option>
+            </select>
+          </div>
           <!--opcion marca del carro-->
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <label class="input-group-text" for="search-marca">1</label>
+              <label class="input-group-text" for="search-marca">2</label>
             </div>
             <select class="custom-select" id="search-marca">
-              <option selected>Choose...</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option selected>Marca</option>
+              <option value="1">Toyota</option>
+              <option value="2">Ford</option>
+              <option value="3">Honda</option>
             </select>
           </div>
           <!--opcion modelo del carro-->
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <label class="input-group-text" for="search-modelo">2</label>
+              <label class="input-group-text" for="search-modelo">3</label>
             </div>
             <select class="custom-select" id="search-modelo">
-              <option selected>Choose...</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option selected>Modelo</option>
+              <option value="1">4Runner Limited</option>
+              <option value="2">Mustang GT</option>
+              <option value="3">Accord</option>
             </select>
           </div>
-          <!--opcion tipo de motor-->
+          <!--opcion motor del carro-->
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <label class="input-group-text" for="search-motor">3</label>
+              <label class="input-group-text" for="search-motor">4</label>
             </div>
             <select class="custom-select" id="search-motor">
-              <option selected>Choose...</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option selected>Motor</option>
+              <option value="1">8 Cilindros</option>
+              <option value="2">6 Cilindros</option>
+              <option value="3">4 Cilindros</option>
             </select>
           </div>
-          <button type="button" class="btn btn-primary">Primary</button>
+          <button type="button" class="btn btn-primary">Buscar</button>
         </div>
         <!--Carousel-->
-        <div id="carousel" class="col-lg-7">
+        <div id="carousel" class="col-lg-7 d-none d-md-block">
           <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -126,7 +233,7 @@
                 <img class="d-block w-100" src="./img/respuestos-auto.jpg" alt="Second slide">
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100" src="./img/todo-repuesto.jpg" alt="Third slide">
+                <img class="d-block w-100" src="./img/disco-pastilla.jpg" alt="Third slide">
               </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -144,55 +251,79 @@
   </section>
   <!--Fin del Section 1-->
   <!--Inicio del Section 2 (servicios)-->
-  <section>
+  <section id="servicios">
     <div class="container">
-      <!--Servicios-->
-      <div id="servicios" class="row">
-        <div class="col-sm-12 col-md-6 col-lg-3 border border-dark rounded">
-          <div class="row">
-            <div class="col-3">
-              <i class="fas fa-tags"></i>
-            </div>
-            <div class="col-9">
-              <h5>Precios con descuentos</h5>
-              <p>Precios reducidos en repuestos de muchas marcas</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-3 border border-dark rounded">
-          <div class="row">
-            <div class="col-3">
-              <i class="fas fa-shipping-fast"></i>
-            </div>
-            <div class="col-9">
-              <h5>Envio seguro</h5>
-              <p>Para los pedidos mayores de 20$, la entrega sera gratuita</p>
+      <div class="row my-4">
+        <div class="col-12 col-md-6 col-lg-3 d-none d-md-block">
+          <div class="card mb-3">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <i class="fas fa-tags mt-3 color-fas" style="font-size: 60px;"></i>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Descuentos</h5>
+                  <p class="card-text">
+                    <small>Precios en repuestos de muchas marcas </small>
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-3 border border-dark rounded">
-          <div class="row">
-            <div class="col-3">
-              <i class="fas fa-stopwatch"></i>
-            </div>
-            <div class="col-9">
-              <h5>Nuestros envios</h5>
-              <p>En menos de 24 horas despues del pago,solo caracas</p>
+        <div class="col-12 col-md-6 col-lg-3 d-none d-md-block" style="max-height: 110px;">
+          <div class="card mb-3">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <i class="fas fa-shipping-fast mt-3 color-fas" style="font-size: 60px;"></i>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Envíos seguros</h5>
+                  <p class="card-text">
+                    <small>Los pedidos mayores de 50$, la entrega será gratuita </small>
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-3 border border-dark rounded">
-          <div class="row">
-            <div class="col-3">
-              <i class="fas fa-tags"></i>
+        <div class="col-12 col-md-6 col-lg-3 d-none d-md-block">
+          <div class="card mb-3">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <i class="fas fa-stopwatch mt-3 color-fas" style="font-size: 60px;"></i>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Entregas</h5>
+                  <p class="card-text">
+                    <small>En menos de 24 horas después del pago</small>
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="col-9">
-              <h5>Modo de envio</h5>
-              <p>Dhl, Domesa, Zoom</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 d-none d-md-block">
+          <div class="card mb-3">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <i class="fas fa-box mt-3 color-fas" style="font-size: 60px;"></i>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Modo envío</h5>
+                  <p class="card-text">
+                    <small>Con la ayuda de Zoom, Domesa, DHL</small>
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
   </section>
   <!--Fin del Section 2-->
   <!--Inicio del Section 3 (Piezas,Fabricantes y Accesorios)-->
@@ -219,272 +350,118 @@
           </div>
         </div>
         <div class="tab-content" id="myTabContent">
+          <!--Contenido de las piezas-->
           <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-            <!--Contenido de las piezas-->
             <div class="container">
-              <div id="ca-container" class="ca-container">
-                <div class="ca-wrapper">
-                  <div class="ca-item ca-item-1">
-                    <div class="ca-item-main">
-                      <div class="ca-icon"></div>
-                      <h3>Amortiguación</h3>
-                      <h4>
-                        <span>
-                          <a href="#">Amortiguadores</a>
-                          <a href="#">Copela de amortiguadores</a>
-                          <a href="#">Guardapolvo amortiguador y almohadilla de tope suspensión</a>
-                        </span>
-                      </h4>
-                      <a href="#" class="ca-more">more...</a>
+              <div class="wrapper">
+                <div class="testimonial-carousel owl-carousel">
+                  <div class="single-testi">
+                    <div class="img-area">
+                      <img src="./img/disco-freno.jpg" alt="">
                     </div>
-                    <div class="ca-content-wrapper">
-                      <div class="ca-content">
-                        <h6>Animals are not commodities</h6>
-                        <a href="#" class="ca-close">close</a>
-                        <div class="ca-content-text">
-                          <p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil
-                            existence, that I neglect my talents. I should be incapable of drawing a single stroke at
-                            the present moment; and yet I feel that I never was a greater artist than now.</p>
-                          <p>When, while the lovely valley teems with vapour around me, and the meridian sun strikes the
-                            upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into
-                            the inner sanctuary, I throw myself down among the tall grass by the trickling stream;</p>
-                          <p>She packed her seven versalia, put her initial into the belt and made herself on the way.
-                          </p>
-                        </div>
-                        <ul>
-                          <li><a href="#">Read more</a></li>
-                          <li><a href="#">Share this</a></li>
-                          <li><a href="#">Become a member</a></li>
-                          <li><a href="#">Donate</a></li>
-                        </ul>
-                      </div>
+                    <div class="img-text">
+                      <h2>Disco de Freno</h2>
+                      <hr>
+                      <a href="#" class="d-block text-white">Mas...</a>
                     </div>
                   </div>
-                  <div class="ca-item ca-item-2">
-                    <div class="ca-item-main">
-                      <div class="ca-icon"></div>
-                      <h3>Frenos</h3>
-                      <h4>
-                        <span>
-                          <a href="#">Pastilla de frenos</a>
-                          <a href="#">Disco de frenos</a>
-                          <a href="#">Juego de forros de freno de tambor</a>
-                        </span>
-                      </h4>
-                      <a href="#" class="ca-more">more...</a>
+                  <div class="single-testi">
+                    <div class="img-area">
+                      <img src="./img/aceite.jpg" alt="">
                     </div>
-                    <div class="ca-content-wrapper">
-                      <div class="ca-content">
-                        <h6>Would you eat your dog?</h6>
-                        <a href="#" class="ca-close">close</a>
-                        <div class="ca-content-text">
-                          <p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil
-                            existence, that I neglect my talents. I should be incapable of drawing a single stroke at
-                            the present moment; and yet I feel that I never was a greater artist than now.</p>
-                          <p>When, while the lovely valley teems with vapour around me, and the meridian sun strikes the
-                            upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into
-                            the inner sanctuary, I throw myself down among the tall grass by the trickling stream;</p>
-                          <p>She packed her seven versalia, put her initial into the belt and made herself on the way.
-                          </p>
-                        </div>
-                        <ul>
-                          <li><a href="#">Read more</a></li>
-                          <li><a href="#">Share this</a></li>
-                          <li><a href="#">Become a member</a></li>
-                          <li><a href="#">Donate</a></li>
-                        </ul>
-                      </div>
+                    <div class="img-text">
+                      <h2>Aceite</h2>
+                      <hr>
+                      <a href="#" class="d-block text-white">Mas...</a>
                     </div>
                   </div>
-                  <div class="ca-item ca-item-3">
-                    <div class="ca-item-main">
-                      <div class="ca-icon"></div>
-                      <h3>Filtros</h3>
-                      <h4>
-                        <span>
-                          <a href="#">Filtro de aceite</a>
-                          <a href="#">Filtro de aire</a>
-                          <a href="#">Filtro de combustible</a>
-                        </span>
-                      </h4>
-                      <a href="#" class="ca-more">more...</a>
+                  <div class="single-testi">
+                    <div class="img-area">
+                      <img src="./img/filtro.jpg" alt="">
                     </div>
-                    <div class="ca-content-wrapper">
-                      <div class="ca-content">
-                        <h6>You can change the world</h6>
-                        <a href="#" class="ca-close">close</a>
-                        <div class="ca-content-text">
-                          <p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil
-                            existence, that I neglect my talents. I should be incapable of drawing a single stroke at
-                            the present moment; and yet I feel that I never was a greater artist than now.</p>
-                          <p>When, while the lovely valley teems with vapour around me, and the meridian sun strikes the
-                            upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into
-                            the inner sanctuary, I throw myself down among the tall grass by the trickling stream;</p>
-                          <p>She packed her seven versalia, put her initial into the belt and made herself on the way.
-                          </p>
-                        </div>
-                        <ul>
-                          <li><a href="#">Read more</a></li>
-                          <li><a href="#">Share this</a></li>
-                          <li><a href="#">Become a member</a></li>
-                          <li><a href="#">Donate</a></li>
-                        </ul>
-                      </div>
+                    <div class="img-text">
+                      <h2>Filtro</h2>
+                      <hr>
+                      <a href="#" class="d-block text-white">Mas...</a>
                     </div>
                   </div>
-                  <div class="ca-item ca-item-4">
-                    <div class="ca-item-main">
-                      <div class="ca-icon"></div>
-                      <h3>Aceites y Líquidos</h3>
-                      <h4>
-                        <span>
-                          <a href="#">Aceite de motor</a>
-                          <a href="#">Aceite de transmisión y aceite de diferencial</a>
-                          <a href="#">Liquido de frenos</a>
-                        </span>
-                      </h4>
-                      <a href="#" class="ca-more">more...</a>
+                  <div class="single-testi">
+                    <div class="img-area">
+                      <img src="./img/disco-freno.jpg" alt="">
                     </div>
-                    <div class="ca-content-wrapper">
-                      <div class="ca-content">
-                        <h6>Think globally, act locally</h6>
-                        <a href="#" class="ca-close">close</a>
-                        <div class="ca-content-text">
-                          <p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil
-                            existence, that I neglect my talents. I should be incapable of drawing a single stroke at
-                            the present moment; and yet I feel that I never was a greater artist than now.</p>
-                          <p>When, while the lovely valley teems with vapour around me, and the meridian sun strikes the
-                            upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into
-                            the inner sanctuary, I throw myself down among the tall grass by the trickling stream;</p>
-                          <p>She packed her seven versalia, put her initial into the belt and made herself on the way.
-                          </p>
-                        </div>
-                        <ul>
-                          <li><a href="#">Read more</a></li>
-                          <li><a href="#">Share this</a></li>
-                          <li><a href="#">Become a member</a></li>
-                          <li><a href="#">Donate</a></li>
-                        </ul>
-                      </div>
+                    <div class="img-text">
+                      <h2>Disco de Freno</h2>
+                      <hr>
+                      <a href="#" class="d-block text-white">Mas...</a>
                     </div>
                   </div>
-                  <div class="ca-item ca-item-5">
-                    <div class="ca-item-main">
-                      <div class="ca-icon"></div>
-                      <h3>Suspensión y brazos</h3>
-                      <h4>
-                        <span>
-                          <a href="#">Buje de rueda</a>
-                          <a href="#">Bieletas de suspensión</a>
-                          <a href="#">Silentblock de brazo de suspensión</a>
-                        </span>
-                      </h4>
-                      <a href="#" class="ca-more">more...</a>
+                  <div class="single-testi">
+                    <div class="img-area">
+                      <img src="./img/aceite.jpg" alt="">
                     </div>
-                    <div class="ca-content-wrapper">
-                      <div class="ca-content">
-                        <h6>Animals have rights, too!</h6>
-                        <a href="#" class="ca-close">close</a>
-                        <div class="ca-content-text">
-                          <p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil
-                            existence, that I neglect my talents. I should be incapable of drawing a single stroke at
-                            the present moment; and yet I feel that I never was a greater artist than now.</p>
-                          <p>When, while the lovely valley teems with vapour around me, and the meridian sun strikes the
-                            upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into
-                            the inner sanctuary, I throw myself down among the tall grass by the trickling stream;</p>
-                          <p>She packed her seven versalia, put her initial into the belt and made herself on the way.
-                          </p>
-                        </div>
-                        <ul>
-                          <li><a href="#">Read more</a></li>
-                          <li><a href="#">Share this</a></li>
-                          <li><a href="#">Become a member</a></li>
-                          <li><a href="#">Donate</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="ca-item ca-item-6">
-                    <div class="ca-item-main">
-                      <div class="ca-icon"></div>
-                      <h3>Dirección</h3>
-                      <h4>
-                        <span>
-                          <a href="#">Rotula de dirección</a>
-                          <a href="#">Rotula axial de dirección</a>
-                          <a href="#">Barra de dirección</a>
-                        </span>
-                      </h4>
-                      <a href="#" class="ca-more">more...</a>
-                    </div>
-                    <div class="ca-content-wrapper">
-                      <div class="ca-content">
-                        <h6>How essential is meat?</h6>
-                        <a href="#" class="ca-close">close</a>
-                        <div class="ca-content-text">
-                          <p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil
-                            existence, that I neglect my talents. I should be incapable of drawing a single stroke at
-                            the present moment; and yet I feel that I never was a greater artist than now.</p>
-                          <p>When, while the lovely valley teems with vapour around me, and the meridian sun strikes the
-                            upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into
-                            the inner sanctuary, I throw myself down among the tall grass by the trickling stream;</p>
-                          <p>She packed her seven versalia, put her initial into the belt and made herself on the way.
-                          </p>
-                        </div>
-                        <ul>
-                          <li><a href="#">Read more</a></li>
-                          <li><a href="#">Share this</a></li>
-                          <li><a href="#">Become a member</a></li>
-                          <li><a href="#">Donate</a></li>
-                        </ul>
-                      </div>
+                    <div class="img-text">
+                      <h2>Aceite</h2>
+                      <hr>
+                      <a href="#" class="d-block text-white">Mas...</a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">Lorem ipsum dolor sit
+              amet consectetur adipisicing elit. Quam facere sed dicta veniam illo, placeat rem velit consectetur itaque
+              exercitationem? Cupiditate expedita tenetur repellat. Laborum culpa modi enim corporis cum!
+            </div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">Lorem ipsum, dolor sit
+              amet consectetur adipisicing elit. Laudantium ab alias quia ut similique facilis voluptatibus aliquam rem
+              cumque esse consectetur asperiores, debitis laboriosam. Eos atque at consequuntur eius architecto.
+            </div>
           </div>
-          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">Lorem ipsum dolor sit
-            amet consectetur adipisicing elit. Quam facere sed dicta veniam illo, placeat rem velit consectetur itaque
-            exercitationem? Cupiditate expedita tenetur repellat. Laborum culpa modi enim corporis cum!</div>
-          <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">Lorem ipsum, dolor sit
-            amet consectetur adipisicing elit. Laudantium ab alias quia ut similique facilis voluptatibus aliquam rem
-            cumque esse consectetur asperiores, debitis laboriosam. Eos atque at consequuntur eius architecto.</div>
         </div>
       </div>
-    </div>
   </section>
   <!--Fin del Section 3-->
   <!--Inicio del Setion 4 (blog)-->
-  <section>
-    <div id="blog" class="container">
+  <section id="blog">
+    <div class="container">
       <div class="row">
-        <div class="col-lg-6 card mb-3" style="max-width: 530px; margin:0px 20px;">
-          <div class="row no-gutters">
-            <div class="col-md-4">
-              <img src="..." class="card-img" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <div class="col-12 col-lg-6">
+          <div class="card mb-3">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="./img/tios-fenos.jpg" class="card-img" alt="...">
+              </div>
+              <div class="col-md-8 pl-2">
+                <div class="card-body">
+                  <h5 class="card-title">Tipos de pastillas de frenos</h5>
+                  <p class="card-text">Los frenos son un componente esencial de un sistema de conducción de vehículos, y
+                    serían inútiles sin la adición de pastillas de freno. Las pastillas de freno hacen el mismo trabajo
+                    en un disco de freno que las zapatas en un freno de tambor, creando fricción para frenar o detener
+                    el vehículo. </p>
+                  <a href="https://www.puromotores.com/13176316/tipos-de-pastillas-de-freno" target="_blank"><small
+                      class="text-muted">Leer mas...</small></a>
+
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-6 card mb-3" style="max-width: 530px; margin:0px 20px;">
-          <div class="row no-gutters">
-            <div class="col-md-4">
-              <img src="..." class="card-img" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <div class="col-12 col-lg-6 d-none d-md-block">
+          <div class="card mb-3">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="./img/ceramica.jpg" class="card-img" alt="...">
+              </div>
+              <div class="col-md-8 pl-2">
+                <div class="card-body">
+                  <h5 class="card-title">Cerámica contra metálicas</h5>
+                  <p class="card-text">Comprometes la seguridad y rendimiento del frenado al no reemplazar las pastillas
+                    de freno cuando es necesario. Algunas pastillas de freno se desgastan más rápido que otras y
+                    producen más polvo de pastillas también, por lo que deberías conocer las características de las
+                    pastillas de freno metálicas y cerámicas.</p>
+                  <a href="https://www.puromotores.com/13147959/pastillas-de-freno-de-ceramica-contra-metalicas"
+                    target="_blank"><small class="text-muted">Leer mas...</small></a>
+                </div>
               </div>
             </div>
           </div>
@@ -495,21 +472,62 @@
   <!--Fin del Section 4-->
   <!--Footer-->
   <footer>
-    <div class="container">
-      <div id="footer" class="row">
-        <div class="col-4">
-          <p>Redes Sociales: </p>
-          <i class="fab fa-twitter"></i>
-          <i class="fab fa-instagram"></i>
-          <i class="fab fa-facebook-f"></i>
-        </div>
-        <div id="footer-nombre" class="col-4">
-          <h1>Parts Angels</h1>
-        </div>
-        <div id="footer-derechos" class="col-4">
-          <p>Todos los derechos reservados</p>
+    <div class="container-fluid">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-3 segment-one mt-sm-2">
+              <h2>Parts Angels</h2>
+              <p>Somos la casa de repuesto especializadas en pastilla y disco de frenos, contamos con las mejores marcas
+                y asegurandote la calidad de los productos seleccionados</p>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 segment-two mt-sm-2">
+              <h2>Contáctanos</h2>
+              <form>
+                  <div class="form-row">
+                      <div class="form-group col">
+                          <input type="text" class="form-control" placeholder="Correo">
+                      </div>
+                  </div>
+                  <div class="form-row">
+                      <div class="form-group col">
+                          <textarea name="text" class="form-control form-control-lg"
+                              placeholder="Sobre que quieres hablar?"></textarea>
+                      </div>
+                  </div>
+                  <div class="form-row">
+                      <div class="col">
+                          <button type="button" class="btn btn-block">Enviar</button>
+                      </div>
+                  </div>
+              </form>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 segment-three mt-sm-2">
+              <h2>Siguenos:</h2>
+              <p>
+                Siguenos en nuestras redes sociales para que seas el primero en enterarte de los respuestos que llegan a la tienda virtual
+              </p>
+              <a href=""><i class="fab fa-twitter"></i></a>
+              <a href=""><i class="fab fa-facebook-f"></i></a>
+              <a href=""><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 segment-four mt-sm-2">
+              <h2>Nuestro NewLetter</h2>
+              <p>
+                  Suscríbete y ahorra a partir de ahora
+              </p>
+              <p>
+                  Quieres recibir la Newsletter a tu correo electrónico con promociones especiales
+              </p>
+              <form action="">
+                <input type="email">
+                <input type="submit" value="suscribirse">
+              </form>
+            </div>
+          </div>
         </div>
       </div>
+      <p class="footer-bottom">Todos los derechos reservados</p>
     </div>
   </footer>
   <!--Footer-->
@@ -519,15 +537,27 @@
   <script src="./js/jquery.min.js"></script>
   <script src="./js/popper.min.js"></script>
   <script src="./boostrap/js/bootstrap.js"></script>
-  <!--Carrusel-->
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-  <script type="text/javascript" src="./js/js-carrusel/jquery.easing.1.3.js"></script>
-  <!-- the jScrollPane script -->
-  <script type="text/javascript" src="./js/js-carrusel/jquery.mousewheel.js"></script>
-  <script type="text/javascript" src="./js/js-carrusel/jquery.contentcarousel.js"></script>
-  <script type="text/javascript">
-    $('#ca-container').contentcarousel();
+  <script src="js/owl.carousel.js"></script>
+  <script>
+
+    $('.testimonial-carousel').owlCarousel({
+      loop: true,
+      margin: 20,
+      autoplay: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 2
+        },
+        900: {
+          items: 3
+        }
+      }
+    })
   </script>
+
 </body>
 
 </html>
