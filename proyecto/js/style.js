@@ -1,9 +1,5 @@
 window.sr = ScrollReveal();
-sr.reveal('.menu',{
-     duration: 2000,
-     origin: 'left',
-     distance: '300px'
-});
+
 sr.reveal('#seleccionVehiculo',{
     duration: 2000,
     origin: 'top',
